@@ -1,5 +1,6 @@
 body {
     background-color: aquamarine;
+    font-family: sans-serif;
 }
 
 * {
@@ -10,7 +11,20 @@ body {
 
 .container {
     background-color: blueviolet;
-    display: flex;
+    /*display: inline-flex;  Se ajusta al ancho de los items */
+    display: flex; /* Se ajusta al ancho disponible.- Es el más común de usar */
+
+    flex-direction: row; /* Valor por default */
+    /* flex-direction: row-reverse; */ /* Main axis De derecha a izquierda */
+    /* flex-direction: column; */ /* Main axis de arriba hacia abajo, en una columna */
+    /* flex-direction: column-reverse; */ /* Main axis de abajo hacia arriba, en una columna */
+
+    justify-content: start; /* Valor por default */
+    justify-content: end; /* Alinea los items hacia la derecha */
+    justify-content: center; /* Alinea los  items en el centro */
+    justify-content: space-around; /* Distribuye los items asignandoles un espacio al rededor de cada item */
+    justify-content: space-between; /* Distribuye un espacio proporcional entre los items */
+    justify-content: space-evenly; /* Distribuye los items y los espacios son iguales */
 }
 
 .items{
@@ -21,4 +35,5 @@ body {
     font-size: 24px;
     font-weight: bold;
     padding-top: 32px;
+    border: 1px solid black;
 }

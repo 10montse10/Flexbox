@@ -14,26 +14,70 @@ body {
     /*display: inline-flex;  Se ajusta al ancho de los items */
     display: flex; /* Se ajusta al ancho disponible.- Es el más común de usar */
 
-    flex-direction: row; /* Valor por default */
+    /* flex-direction: row; */ /* Valor por default */
     /* flex-direction: row-reverse; */ /* Main axis De derecha a izquierda */
     /* flex-direction: column; */ /* Main axis de arriba hacia abajo, en una columna */
     /* flex-direction: column-reverse; */ /* Main axis de abajo hacia arriba, en una columna */
 
-    justify-content: start; /* Valor por default */
-    justify-content: end; /* Alinea los items hacia la derecha */
-    justify-content: center; /* Alinea los  items en el centro */
-    justify-content: space-around; /* Distribuye los items asignandoles un espacio al rededor de cada item */
-    justify-content: space-between; /* Distribuye un espacio proporcional entre los items */
-    justify-content: space-evenly; /* Distribuye los items y los espacios son iguales */
+    /* justify-content: start;  Valor por default */ 
+    /* justify-content: end;  Alinea los items hacia la derecha */ 
+    /* justify-content: center;  Alinea los  items en el centro */ 
+    /* justify-content: space-around;  Distribuye los items asignandoles un espacio al rededor de cada item */ 
+    /* justify-content: space-between;  Distribuye un espacio proporcional entre los items */ 
+    /* justify-content: space-evenly; Distribuye los items y los espacios son iguales */ 
+
+    height: 500px; /* Damos altura para probar align-items */
+    /* align-items: flex-start; */ /* Alimea hacia arriba */
+    /* align-items: flex-end; Alinea hasta abajo */
+    /* align-items: center; Alinea en el centro */
+    /* align-items: stretch; */ /* Se debe comentar la altura de el item. */ /* Crecen en la altura los elementos en el espacio disponible */
+    /* align-items: baseline; Alinea los items en función de la línea base del texto que contiene. Independientemenete del tmaño del texto, ubicación del contenido y altura el item. */
+
+    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    
+
 }
 
 .items{
     background-color: blue;
     width: 100px;
-    height: 100px;
+    height: 100px; 
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     padding-top: 32px;
     border: 1px solid black;
 }
+
+/* Vamos a usar algo que se llama pseudoclases para seleccionar los items individualmente */
+
+/* .items:nth-child(1){
+    background-color: bisque;
+    font-size: 24px;
+    padding-top: 30px;
+    height: 100px;
+}
+
+.items:nth-child(2){
+    background-color: burlywood;
+    font-size: 18px;
+    padding-top: 20px;
+    height: 250px;
+}
+
+.items:nth-child(3){
+    background-color: plum;
+    font-size: 30px;
+    padding-top: 15px;
+    height: 350px;
+}
+
+.items:nth-child(4){
+    background-color: purple;
+    font-size: 12px;
+    padding-top: 15px;
+    height: 400px;
+} */

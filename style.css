@@ -11,67 +11,33 @@ body {
 
 .container {
     background-color: blueviolet;
-    /*display: inline-flex;  Se ajusta al ancho de los items */
-    display: flex; /* Se ajusta al ancho disponible.- Es el más común de usar */
-
-    /* flex-direction: row; */ /* Valor por default */
-    /* flex-direction: row-reverse; */ /* Main axis De derecha a izquierda */
-    /* flex-direction: column; */ /* Main axis de arriba hacia abajo, en una columna */
-    /* flex-direction: column-reverse; */ /* Main axis de abajo hacia arriba, en una columna */
-
-    /* justify-content: start;  Valor por default */ 
-    /* justify-content: end;  Alinea los items hacia la derecha */ 
-    /* justify-content: center;  Alinea los  items en el centro */ 
-    /* justify-content: space-around;  Distribuye los items asignandoles un espacio al rededor de cada item */ 
-    /* justify-content: space-between;  Distribuye un espacio proporcional entre los items */ 
-    /* justify-content: space-evenly; Distribuye los items y los espacios son iguales */ 
-
-    height: 500px;  /* Damos altura para probar align-items */
-    /* align-items: flex-start; */ /* Alimea hacia arriba */
-    /* align-items: flex-end; Alinea hasta abajo */
-    /* align-items: center; Alinea en el centro */
-    /* align-items: stretch; */ /* Se debe comentar la altura de el item. */ /* Crecen en la altura los elementos en el espacio disponible */
-    /* align-items: baseline; Alinea los items en función de la línea base del texto que contiene. Independientemenete del tmaño del texto, ubicación del contenido y altura el item. */
-
-    /* 
-    EJERCICIO
-    align-items: baseline;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse; 
-    */
-
-    width: 350px;
-    /* flex-wrap: nowrap; */  /* Este es el valor por dfault. Los Items se ajustan al ancho de el contenedor. */
-    flex-wrap: wrap; /* Esto permite tener multiple líneas, si los Items no caben en el contenedor, dará un salto de línea. */
-
-    /* align-content: normal; */ /* Valor por default */
-    /* align-content: flex-start; */ /* Ajusta las líneas al inicio del eje transversal */
-    /* align-content: flex-end; */ /* Ajusta las líneas al final del eje transversal */
-    /* align-content: center; */ /* Ajusta las líneas al centro de el eje tranversal */
-    /* align-content: space-around;  *//* Distribuye el espacio al rededor de cada línea de forma proporcional */
-    /* align-content: space-between; */ /* Distribuye el espacio proporcionalmente entre cada línea, sin considerar el contenedor */
-    /* align-content: space-evenly; */ /* Distribuye el espacio proporcionalmente entre las líneas y el contenedor. */
-    /* align-content: stretch; */ /* Estiran el alto de los items sobre el eje transversal. Los Items no deben tener un alto definido */
-
-    justify-content: space-between;
-    align-content: center;
-    align-content: space-between;
+    display: flex; /* Esto habilita ls propiedades de flexbox */
+    flex-direction: row; /* Este es el valor por default*/
+    flex-direction: column; /* Cambia de dirección al eje principal */
     
-    
-    
-
 }
 
+/* Propiedades de flexbox para los items.
+    
+    * flex-basis -> Tamaño del main-ize del elemento. Es como un 'width/height' ancho base de el elemento. 
+
+        Cuando flex-direction: row / row-reserve -> flex-basis = ancho
+        Cuando flex-direction: column / column-reserve -> flex-basis alto
+
+        Flex-basis es relativo al espacio disponible de el contenerdor. Si no hay espacio suficiente, los elementos no crecerán más allá.
+
+        Si tengo Flex-bsis declarado el width/height no funciona, de acuerdo al contexto de dirección de el eje principal.
+*/
+
 .items{
+    flex-basis: 100px;
     background-color: blue;
-    width: 6.25rem;
-    height: 6.25rem;  
+    /* width: 6.25rem;
+    height: 6.25rem;  */ 
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
-    padding-top: 2rem;
-    border: .0625rem solid black;
+    border: 1px solid black;
 }
 
 /* Vamos a usar algo que se llama pseudoclases para seleccionar los items individualmente */

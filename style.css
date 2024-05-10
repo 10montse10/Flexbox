@@ -11,61 +11,40 @@ body {
 
 .container {
     background-color: blueviolet;
-    display: flex; /* Esto habilita ls propiedades de flexbox */
-    flex-direction: row; /* Este es el valor por default*/
-    flex-direction: column; /* Cambia de dirección al eje principal */
-    
+    display: flex;
 }
 
 /* Propiedades de flexbox para los items.
     
-    * flex-basis -> Tamaño del main-ize del elemento. Es como un 'width/height' ancho base de el elemento. 
+    * flex-grow ->  Esta propiedad ajusta el factor de crecimiento de los elementos, en función de el espacio disponible. El valor por default es 'auto'.
 
-        Cuando flex-direction: row / row-reserve -> flex-basis = ancho
-        Cuando flex-direction: column / column-reserve -> flex-basis alto
-
-        Flex-basis es relativo al espacio disponible de el contenerdor. Si no hay espacio suficiente, los elementos no crecerán más allá.
-
-        Si tengo Flex-bsis declarado el width/height no funciona, de acuerdo al contexto de dirección de el eje principal.
+    Esta propiedad recibe valores númericos: 1,2,3,4...
+    El número que coloquemos es el factor de crecimiento.
 */
 
 .items{
-    flex-basis: 100px;
+    flex: auto; /* Este es el valor por default */
+    flex-grow: 1; /* Va hacer que todos los items crezcan con el mismo factor. */
     background-color: blue;
-    /* width: 6.25rem;
-    height: 6.25rem;  */ 
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid black;
 }
 
-/* Vamos a usar algo que se llama pseudoclases para seleccionar los items individualmente */
-
-/* .items:nth-child(1){
-    background-color: bisque;
-    font-size: 1.5rem;
-    padding-top: 1.875rem;
-    height: 6.25rem;
+.puchunguito {
+    flex-grow: 2; /* El item con esta clase, crece con un factor de 2 */
 }
 
-.items:nth-child(2){
-    background-color: burlywood;
-    font-size: 1.125rem;
-    padding-top: 1.25rem;
-    height: 15.625rem;
+.hola {
+    flex-grow: 3;
+    background-color: violet;
+}
+.holis {
+    flex-grow: 2;
+    background-color: yellow;
 }
 
-.items:nth-child(3){
-    background-color: plum;
-    font-size: 1.875rem;
-    padding-top: .9375rem;
-    height: 21.875rem;
+.holaa {
+    background-color: red;
 }
-
-.items:nth-child(4){
-    background-color: purple;
-    font-size: .75rem;
-    padding-top: .9375rem;
-    height: 25rem;
-} */

@@ -14,17 +14,20 @@ body {
     display: flex;
 }
 
-/* Propiedades de flexbox para los items.
-    
-    * flex-grow ->  Esta propiedad ajusta el factor de crecimiento de los elementos, en función de el espacio disponible. El valor por default es 'auto'.
+/* 
 
-    Esta propiedad recibe valores númericos: 1,2,3,4...
-    El número que coloquemos es el factor de crecimiento.
+    flex-shrink -> Esta propiedad funciona como un factor de contracción o encojimiento, reducción de los elementos de un contenedor flex.
+
+        flex-shrink: 1; -> Este es el valor por default de los items. Si no se declara esto es lo que aplica.
+
+        Recibe valores númericos: 1,2,3,4...
+
 */
 
-.items{
-    flex: auto; /* Este es el valor por default */
-    flex-grow: 1; /* Va hacer que todos los items crezcan con el mismo factor. */
+.items {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1; /* Valor por default */
     background-color: blue;
     text-align: center;
     font-size: 24px;
@@ -32,19 +35,30 @@ body {
     border: 1px solid black;
 }
 
-.puchunguito {
-    flex-grow: 2; /* El item con esta clase, crece con un factor de 2 */
+.apachurro1 {
+    flex-shrink: 1;
+    flex-basis: 400px;
+    color: azure;
+    background-color: blue;
 }
 
-.hola {
-    flex-grow: 3;
-    background-color: violet;
-}
-.holis {
-    flex-grow: 2;
-    background-color: yellow;
+.apachurro2 {
+    flex-shrink: 2;
+    flex-basis: 300px;
+    color: brown;
+    background-color: greenyellow;
 }
 
-.holaa {
+.apachurro3 {
+    flex-shrink: 3;
+    flex-basis: 200px;
+    color: azure;
     background-color: red;
+}
+
+.apachurro4 {
+    flex-shrink: 4;
+    flex-basis: 100px;
+    color: rebeccapurple;
+    background-color: yellow;
 }

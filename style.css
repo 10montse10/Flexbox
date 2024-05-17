@@ -10,55 +10,22 @@ body {
 }
 
 .container {
-    background-color: blueviolet;
+    width: 500px;
     display: flex;
-}
-
-/* 
-
-    flex-shrink -> Esta propiedad funciona como un factor de contracción o encojimiento, reducción de los elementos de un contenedor flex.
-
-        flex-shrink: 1; -> Este es el valor por default de los items. Si no se declara esto es lo que aplica.
-
-        Recibe valores númericos: 1,2,3,4...
-
-*/
+    flex-wrap: wrap;
+    /* gap: 24px; */ /* Espacio entre los elementos*/
+    /* gap: 4rem; *//* Unidades absolutas: px o relativas: em o rem */
+    column-gap: 16px; /* Espacio entre los elementos en la vertical */
+    row-gap: 32px; /* Espacio entre los elementos en la horizontal */
+    gap: 10px 32px; /* Con dos valores, el primero e para espacio horizontal y el segundo con elespacio vertical */
+    background-color: blueviolet;
 
 .items {
-    flex-basis: 200px;
-    flex-grow: 1;
-    flex-shrink: 1; /* Valor por default */
+    width: 100px;
+    height: 100px;
     background-color: blue;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid black;
-}
-
-.apachurro1 {
-    flex-shrink: 1;
-    flex-basis: 400px;
-    color: azure;
-    background-color: blue;
-}
-
-.apachurro2 {
-    flex-shrink: 2;
-    flex-basis: 300px;
-    color: brown;
-    background-color: greenyellow;
-}
-
-.apachurro3 {
-    flex-shrink: 3;
-    flex-basis: 200px;
-    color: azure;
-    background-color: red;
-}
-
-.apachurro4 {
-    flex-shrink: 4;
-    flex-basis: 100px;
-    color: rebeccapurple;
-    background-color: yellow;
 }

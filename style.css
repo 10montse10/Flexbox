@@ -10,15 +10,24 @@ body {
 }
 
 .container {
-    width: 500px;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-    /* gap: 24px; */ /* Espacio entre los elementos*/
-    /* gap: 4rem; *//* Unidades absolutas: px o relativas: em o rem */
-    column-gap: 16px; /* Espacio entre los elementos en la vertical */
-    row-gap: 32px; /* Espacio entre los elementos en la horizontal */
-    gap: 10px 32px; /* Con dos valores, el primero e para espacio horizontal y el segundo con elespacio vertical */
+    align-items: center;
     background-color: blueviolet;
+    justify-content: space-between;
+}
+
+/* 
+
+    Aling-sef -> Se psa a uno o varios elementos en particular.
+
+    Va a alinear en el eje transversal a ese elementos unicamente. Y sobre escribe la propiedad de aling-items y su valor si se a declarado en el contenedor.
+
+    Recibe los mismmos valores que aling-items: 
+
+    flex-start, end, center, strecth, baseline
+
+*/
 
 .items {
     width: 100px;
@@ -28,4 +37,9 @@ body {
     font-size: 24px;
     font-weight: bold;
     border: 1px solid black;
+}
+
+.solito {
+    align-self: flex-end;
+    /* height: auto; */
 }
